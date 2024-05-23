@@ -39,7 +39,11 @@ namespace SilverlightContrib {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
+#if OPENSILVER
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SilverlightContrib.Opensilver.Resources", typeof(Resources).Assembly);
+#else
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SilverlightContrib.Resources", typeof(Resources).Assembly);
+#endif
                     resourceMan = temp;
                 }
                 return resourceMan;

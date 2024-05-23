@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F4FE2B6D-D968-4933-958C-AF629A028994}"
 	ProjectSection(SolutionItems) = preProject
 		License.txt = License.txt
@@ -10,17 +12,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{600FC932-42D6-4298-B9EF-A87A140B37D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverlightContrib", "SilverlightContrib\SilverlightContrib.csproj", "{FB7C04D9-18C1-4EDD-AA8D-28FA6400E629}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SilverlightContrib.Opensilver", "SilverlightContrib\SilverlightContrib.Opensilver.csproj", "{FB7C04D9-18C1-4EDD-AA8D-28FA6400E629}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverlightContrib.Sample", "SilverlightContrib.Sample\SilverlightContrib.Sample.csproj", "{7181276F-AE2A-42FE-9AEF-8C82CD914667}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SilverlightContrib.Sample.Opensilver", "SilverlightContrib.Sample\SilverlightContrib.Sample.Opensilver.csproj", "{7181276F-AE2A-42FE-9AEF-8C82CD914667}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverlightContrib.Test", "SilverlightContrib.Test\SilverlightContrib.Test.csproj", "{D859C83F-C881-4009-9E22-3DB34C23E4A2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverlightContrib.Test.Opensilver", "SilverlightContrib.Test\SilverlightContrib.Test.Opensilver.csproj", "{D859C83F-C881-4009-9E22-3DB34C23E4A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverlightContrib.Controls", "SilverlightContrib.Controls\SilverlightContrib.Controls.csproj", "{DA40F41E-B029-4819-A57F-8A042EDD3556}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SilverlightContrib.Controls.Opensilver", "SilverlightContrib.Controls\SilverlightContrib.Controls.Opensilver.csproj", "{DA40F41E-B029-4819-A57F-8A042EDD3556}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverlightContrib.Data", "SilverlightContrib.Data\SilverlightContrib.Data.csproj", "{8B1D3778-8E83-4A55-8C8E-B6F8BB7C434A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SilverlightContrib.Data.Opensilver", "SilverlightContrib.Data\SilverlightContrib.Data.Opensilver.csproj", "{8B1D3778-8E83-4A55-8C8E-B6F8BB7C434A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverlightContrib.Sample.Web", "SilverlightContrib.Sample.Web\SilverlightContrib.Sample.Web.csproj", "{9153AE45-EA9A-4242-95AC-105067577774}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SilverlightContrib.Sample.Browser", "SilverlightContrib.Sample.Browser\SilverlightContrib.Sample.Browser.csproj", "{21B08E46-4672-4DD3-AC88-06E2E6C3B646}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -82,16 +84,18 @@ Global
 		{8B1D3778-8E83-4A55-8C8E-B6F8BB7C434A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8B1D3778-8E83-4A55-8C8E-B6F8BB7C434A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{8B1D3778-8E83-4A55-8C8E-B6F8BB7C434A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{9153AE45-EA9A-4242-95AC-105067577774}.Debug|.NET.ActiveCfg = Debug|Any CPU
-		{9153AE45-EA9A-4242-95AC-105067577774}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9153AE45-EA9A-4242-95AC-105067577774}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9153AE45-EA9A-4242-95AC-105067577774}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{9153AE45-EA9A-4242-95AC-105067577774}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{9153AE45-EA9A-4242-95AC-105067577774}.Release|.NET.ActiveCfg = Release|Any CPU
-		{9153AE45-EA9A-4242-95AC-105067577774}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9153AE45-EA9A-4242-95AC-105067577774}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9153AE45-EA9A-4242-95AC-105067577774}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{9153AE45-EA9A-4242-95AC-105067577774}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{21B08E46-4672-4DD3-AC88-06E2E6C3B646}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{21B08E46-4672-4DD3-AC88-06E2E6C3B646}.Debug|.NET.Build.0 = Debug|Any CPU
+		{21B08E46-4672-4DD3-AC88-06E2E6C3B646}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21B08E46-4672-4DD3-AC88-06E2E6C3B646}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21B08E46-4672-4DD3-AC88-06E2E6C3B646}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{21B08E46-4672-4DD3-AC88-06E2E6C3B646}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{21B08E46-4672-4DD3-AC88-06E2E6C3B646}.Release|.NET.ActiveCfg = Release|Any CPU
+		{21B08E46-4672-4DD3-AC88-06E2E6C3B646}.Release|.NET.Build.0 = Release|Any CPU
+		{21B08E46-4672-4DD3-AC88-06E2E6C3B646}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21B08E46-4672-4DD3-AC88-06E2E6C3B646}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21B08E46-4672-4DD3-AC88-06E2E6C3B646}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{21B08E46-4672-4DD3-AC88-06E2E6C3B646}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

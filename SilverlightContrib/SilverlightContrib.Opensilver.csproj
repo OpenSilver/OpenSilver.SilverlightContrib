@@ -1,0 +1,104 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<EnableDefaultItems>false</EnableDefaultItems>
+		<DefineSilverlight>true</DefineSilverlight>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<AssemblyName>SilverlightContrib</AssemblyName>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="OpenSilver" Version="2.2.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Include="..\Solution Items\VersionInfo.cs">
+			<Link>Properties\VersionInfo.cs</Link>
+		</Compile>
+		<Compile Include="Extensions\AnimationExtensions.cs" />
+		<Compile Include="Imaging\BmpDecoder.cs" />
+		<Compile Include="Imaging\BmpFileHeader.cs" />
+		<Compile Include="Imaging\BmpInfoHeader.cs" />
+		<Compile Include="Imaging\EditableImage.cs" />
+		<Compile Include="Imaging\EditableImageErrorEventArgs.cs" />
+		<Compile Include="Imaging\PngEncoder.cs" />
+		<Compile Include="IO\ByteOrder.cs" />
+		<Compile Include="IO\ByteUtility.cs" />
+		<Compile Include="Properties\AssemblyInfo.cs" />
+		<Compile Include="Resources.Designer.cs">
+			<DependentUpon>Resources.resx</DependentUpon>
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+		</Compile>
+		<Compile Include="Text\Parsers\ILexer.cs" />
+		<Compile Include="Text\Parsers\IToken.cs" />
+		<Compile Include="Text\Parsers\Lexer.cs" />
+		<Compile Include="Text\Parsers\ParseException.cs" />
+		<Compile Include="Text\Parsers\Parser.cs" />
+		<Compile Include="Text\StringUtility.cs" />
+		<Compile Include="Tweener\Equations.cs" />
+		<Compile Include="Tweener\TransitionType.cs" />
+		<Compile Include="Tweener\Tween.cs" />
+		<Compile Include="IO\Compression\Zip\Checksums\Adler32.cs" />
+		<Compile Include="IO\Compression\Zip\Checksums\CRC32.cs" />
+		<Compile Include="IO\Compression\Zip\Checksums\IChecksum.cs" />
+		<Compile Include="IO\Compression\Zip\Checksums\StrangeCRC.cs" />
+		<Compile Include="IO\Compression\Zip\Core\FileSystemScanner.cs" />
+		<Compile Include="IO\Compression\Zip\Core\INameTransform.cs" />
+		<Compile Include="IO\Compression\Zip\Core\IScanFilter.cs" />
+		<Compile Include="IO\Compression\Zip\Core\NameFilter.cs" />
+		<Compile Include="IO\Compression\Zip\Core\PathFilter.cs" />
+		<Compile Include="IO\Compression\Zip\Core\StreamUtils.cs" />
+		<Compile Include="IO\Compression\Zip\Encryption\PkzipClassic.cs" />
+		<Compile Include="IO\Compression\Zip\SharpZipBaseException.cs" />
+		<Compile Include="IO\Compression\Zip\ZipCompression\Deflater.cs" />
+		<Compile Include="IO\Compression\Zip\ZipCompression\DeflaterConstants.cs" />
+		<Compile Include="IO\Compression\Zip\ZipCompression\DeflaterEngine.cs" />
+		<Compile Include="IO\Compression\Zip\ZipCompression\DeflaterHuffman.cs" />
+		<Compile Include="IO\Compression\Zip\ZipCompression\DeflaterPending.cs" />
+		<Compile Include="IO\Compression\Zip\ZipCompression\Inflater.cs" />
+		<Compile Include="IO\Compression\Zip\ZipCompression\InflaterDynHeader.cs" />
+		<Compile Include="IO\Compression\Zip\ZipCompression\InflaterHuffmanTree.cs" />
+		<Compile Include="IO\Compression\Zip\ZipCompression\PendingBuffer.cs" />
+		<Compile Include="IO\Compression\Zip\ZipCompression\Streams\DeflaterOutputStream.cs" />
+		<Compile Include="IO\Compression\Zip\ZipCompression\Streams\InflaterInputStream.cs" />
+		<Compile Include="IO\Compression\Zip\ZipCompression\Streams\OutputWindow.cs" />
+		<Compile Include="IO\Compression\Zip\ZipCompression\Streams\StreamManipulator.cs" />
+		<Compile Include="IO\Compression\Zip\FastZip.cs" />
+		<Compile Include="IO\Compression\Zip\IEntryFactory.cs" />
+		<Compile Include="IO\Compression\Zip\ZipConstants.cs" />
+		<Compile Include="IO\Compression\Zip\ZipEntry.cs" />
+		<Compile Include="IO\Compression\Zip\ZipEntryFactory.cs" />
+		<Compile Include="IO\Compression\Zip\ZipException.cs" />
+		<Compile Include="IO\Compression\Zip\ZipExtraData.cs" />
+		<Compile Include="IO\Compression\Zip\ZipFile.cs" />
+		<Compile Include="IO\Compression\Zip\ZipHelperStream.cs" />
+		<Compile Include="IO\Compression\Zip\ZipInputStream.cs" />
+		<Compile Include="IO\Compression\Zip\ZipNameTransform.cs" />
+		<Compile Include="IO\Compression\Zip\ZipOutputStream.cs" />
+		<Compile Include="Utilities\ClipboardHelper\ClipboardHelper.cs" />
+		<Compile Include="Utilities\WheelMouseListener\WheelMouseListener.cs" />
+		<Compile Include="Xaml\ConverterBase.cs" />
+		<Compile Include="Xaml\ConverterException.cs" />
+		<Compile Include="Xaml\ConverterWarningEventArgs.cs" />
+		<Compile Include="Xaml\Emf\Brush.cs" />
+		<Compile Include="Xaml\Emf\EmfContext.cs" />
+		<Compile Include="Xaml\Emf\EmfConverter.cs" />
+		<Compile Include="Xaml\Emf\Pen.cs" />
+		<Compile Include="Xaml\Formatter.cs" />
+		<Compile Include="Xaml\Rtf\RtfConverter.cs" />
+		<Compile Include="Xaml\Rtf\RtfLexer.cs" />
+		<Compile Include="Xaml\Rtf\RtfLexerState.cs" />
+		<Compile Include="Xaml\Rtf\RtfParser.cs" />
+		<Compile Include="Xaml\Rtf\RtfToken.cs" />
+		<Compile Include="Xaml\Rtf\RtfTokenType.cs" />
+		<Compile Include="Xaml\StringConverterBase.cs" />
+		<Compile Include="Xaml\XamlWriter.cs" />
+		<Compile Include="Xaml\XamlWriterSettings.cs" />
+		<Compile Include="Xaml\XmlConverterBase.cs" />
+	</ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Include="Resources.resx">
+			<Generator>PublicResXFileCodeGenerator</Generator>
+			<LastGenOutput>Resources.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+	</ItemGroup>	
+</Project>

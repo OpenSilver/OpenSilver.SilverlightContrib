@@ -1,6 +1,10 @@
 ﻿using System;
 using System.IO;
+#if OPENSILVER
+using OpenSilver.Compatibility;
+#else
 using System.Net;
+#endif
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -35,8 +39,10 @@ namespace SilverlightContrib.Controls
         protected BaseSource()
         {
             this.client = new WebClient();
+#if !OPENSILVER
             this.client.DownloadProgressChanged += client_DownloadProgressChanged;
             this.client.OpenReadCompleted += client_OpenReadCompleted;
+#endif
         }
 
         /// <summary>
@@ -53,35 +59,50 @@ namespace SilverlightContrib.Controls
         {
             (d as BaseSource).OnUriSourcePropertyChanged(e);
         }
-
+#if !OPENSILVER
         private void OnUriSourcePropertyChanged(DependencyPropertyChangedEventArgs e)
+#else
+        private async void OnUriSourcePropertyChanged(DependencyPropertyChangedEventArgs e)
+#endif
         {
-            if (this.client.IsBusy){
+            if (this.client.IsBusy)
+            {
                 this.client.CancelAsync();
             }
 
             Uri source = (Uri)e.NewValue;
-            if (source != null) {
-                try {
+            if (source != null)
+            {
+                try
+                {
                     StreamResourceInfo resource = null;
 
-                    if (!source.IsAbsoluteUri) {
+                    if (!source.IsAbsoluteUri)
+                    {
                         // first try embedded resource
+#if !OPENSILVER
                         resource = Application.GetResourceStream(source);
+#else
+                        resource = await Application.GetResourceStream(source);
+#endif
                     }
-                    if (resource != null) {
+                    if (resource != null)
+                    {
                         OnDownloadProgress(new DownloadProgressEventArgs(100));
 
-                        using (resource.Stream) {
+                        using (resource.Stream)
+                        {
                             OnStreamAvailable(resource.Stream);
                         }
                     }
-                    else {
+                    else
+                    {
                         // try the web
                         this.client.OpenReadAsync(source);
                     }
                 }
-                catch (Exception ex) {
+                catch (Exception ex)
+                {
                     OnDownloadFailed(ex);
                 }
             }
@@ -122,11 +143,12 @@ namespace SilverlightContrib.Controls
 
         private void OnDownloadProgress(DownloadProgressEventArgs e)
         {
-            if (this.DownloadProgress != null) {
+            if (this.DownloadProgress != null)
+            {
                 this.DownloadProgress(this, e);
             }
         }
-
+#if !OPENSILVER
         private void client_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
             OnDownloadProgress(new DownloadProgressEventArgs(e.ProgressPercentage));
@@ -134,14 +156,18 @@ namespace SilverlightContrib.Controls
 
         private void client_OpenReadCompleted(object sender, OpenReadCompletedEventArgs e)
         {
-            if (e.Error != null) {
+            if (e.Error != null)
+            {
                 OnDownloadFailed(e.Error);
             }
-            else if (!e.Cancelled && e.Result != null) {
-                using (e.Result) {
+            else if (!e.Cancelled && e.Result != null)
+            {
+                using (e.Result)
+                {
                     OnStreamAvailable(e.Result);
                 }
             }
         }
+#endif
     }
 }

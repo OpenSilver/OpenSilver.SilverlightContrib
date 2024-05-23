@@ -25,12 +25,20 @@ namespace SilverlightContrib.Sample
             RadioButtonExtractZip.Checked += new RoutedEventHandler(RadioButtonExtractZip_Checked);
         }
 
+#if !OPENSILVER
         void RadioButtonExtractZip_Checked(object sender, RoutedEventArgs e)
+
+#else
+        async void RadioButtonExtractZip_Checked(object sender, RoutedEventArgs e)
+#endif
         {
             lbItems.Items.Clear();
             result.Text = "";
-
-            StreamResourceInfo sr = Application.GetResourceStream(new Uri("Misc/testfile1.zip", UriKind.Relative));
+#if !OPENSILVER
+            StreamResourceInfo sr = Application.GetResourceStream(new Uri("Misc/testfile1.zip", UriKind.Relative));       
+#else            
+            StreamResourceInfo sr = await Application.GetResourceStream(new Uri("Misc/testfile1.zip", UriKind.Relative));
+#endif
             using (ZipInputStream zipInputStream = new ZipInputStream(sr.Stream))
             {
                 ZipEntry entry = zipInputStream.GetNextEntry();
@@ -72,7 +80,7 @@ namespace SilverlightContrib.Sample
         {
             using (StreamReader sr = new StreamReader(ms))
             {
-                string data = 
+                string data =
                     result.Text = sr.ReadToEnd();
             }
         }
@@ -83,7 +91,11 @@ namespace SilverlightContrib.Sample
                 CompressFile((Uri)((ListBox)sender).SelectedItem);
         }
 
+#if !OPENSILVER
         private void CompressFile(Uri resourceUri)
+#else
+        private async void CompressFile(Uri resourceUri)
+#endif
         {
             if(resourceUri == null)
                 throw (new ArgumentException("The resourceUri parameter value cannot be null"));
@@ -100,7 +112,11 @@ namespace SilverlightContrib.Sample
                 // A ZIP stream  
                 using (ZipOutputStream zipOutputStream = new ZipOutputStream(zippedMemoryStream))
                 {
+#if !OPENSILVER
                     using (Stream stream = App.GetResourceStream(resourceUri).Stream)
+#else
+                    using (Stream stream = (await App.GetResourceStream(resourceUri)).Stream)
+#endif
                     {
                         // Highest compression rating  
                         zipOutputStream.SetLevel(9);
