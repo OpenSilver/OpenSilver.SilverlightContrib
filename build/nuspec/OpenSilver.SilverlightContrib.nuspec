@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <metadata>
-    <id>OpenSilver.SilverlightContrib.Controls</id>
+    <id>OpenSilver.SilverlightContrib</id>
     <version>$PackageVersion$</version>
     <title>SilverlightContrib for OpenSilver</title>
     <authors>Userware</authors>
