@@ -16,8 +16,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SilverlightContrib.Opensilv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SilverlightContrib.Sample.Opensilver", "SilverlightContrib.Sample\SilverlightContrib.Sample.Opensilver.csproj", "{7181276F-AE2A-42FE-9AEF-8C82CD914667}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverlightContrib.Test.Opensilver", "SilverlightContrib.Test\SilverlightContrib.Test.Opensilver.csproj", "{D859C83F-C881-4009-9E22-3DB34C23E4A2}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SilverlightContrib.Controls.Opensilver", "SilverlightContrib.Controls\SilverlightContrib.Controls.Opensilver.csproj", "{DA40F41E-B029-4819-A57F-8A042EDD3556}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SilverlightContrib.Data.Opensilver", "SilverlightContrib.Data\SilverlightContrib.Data.Opensilver.csproj", "{8B1D3778-8E83-4A55-8C8E-B6F8BB7C434A}"
@@ -54,16 +52,6 @@ Global
 		{7181276F-AE2A-42FE-9AEF-8C82CD914667}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7181276F-AE2A-42FE-9AEF-8C82CD914667}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{7181276F-AE2A-42FE-9AEF-8C82CD914667}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{D859C83F-C881-4009-9E22-3DB34C23E4A2}.Debug|.NET.ActiveCfg = Debug|Any CPU
-		{D859C83F-C881-4009-9E22-3DB34C23E4A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D859C83F-C881-4009-9E22-3DB34C23E4A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D859C83F-C881-4009-9E22-3DB34C23E4A2}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{D859C83F-C881-4009-9E22-3DB34C23E4A2}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{D859C83F-C881-4009-9E22-3DB34C23E4A2}.Release|.NET.ActiveCfg = Release|Any CPU
-		{D859C83F-C881-4009-9E22-3DB34C23E4A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D859C83F-C881-4009-9E22-3DB34C23E4A2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D859C83F-C881-4009-9E22-3DB34C23E4A2}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{D859C83F-C881-4009-9E22-3DB34C23E4A2}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{DA40F41E-B029-4819-A57F-8A042EDD3556}.Debug|.NET.ActiveCfg = Debug|Any CPU
 		{DA40F41E-B029-4819-A57F-8A042EDD3556}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DA40F41E-B029-4819-A57F-8A042EDD3556}.Debug|Any CPU.Build.0 = Debug|Any CPU
@@ -99,8 +87,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{D859C83F-C881-4009-9E22-3DB34C23E4A2} = {600FC932-42D6-4298-B9EF-A87A140B37D4}
 	EndGlobalSection
 EndGlobal

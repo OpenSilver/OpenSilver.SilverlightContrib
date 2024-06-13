@@ -1,7 +1,8 @@
 @ECHO off
 
 SET BUILD_DIR=%~dp0
-SET SRC_DIR=%~dp0..\OpenSilver.SilverlightContrib
+rem SET SRC_DIR=%~dp0..\OpenSilver.SilverlightContrib
+SET SRC_DIR=%~dp0..
 SET CFG=Release
 
 REM Define the escape character for colored text
