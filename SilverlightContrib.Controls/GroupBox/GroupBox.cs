@@ -16,6 +16,8 @@ namespace SilverlightContrib.Controls
         private RectangleGeometry HeaderRect;
         private ContentControl HeaderContainer;
 
+        private bool _loaded, _applyTemplateDone;
+
         /// <summary>
         /// Creates a new instance of the GroupBox control.
         /// </summary>
@@ -23,6 +25,49 @@ namespace SilverlightContrib.Controls
         {
             DefaultStyleKey = typeof(GroupBox);
             this.SizeChanged += GroupBox_SizeChanged;
+            Loaded += (s, a) => {
+                _loaded = true;
+                PostponeUpdateInitialBackground();
+            };
+        }
+
+        private void PostponeUpdateInitialBackground() {
+            if (_loaded && _applyTemplateDone)
+                Dispatcher.BeginInvoke(UpdateInitialBackground);
+        }
+
+        private static bool IsTransparentBrush(Brush brush) {
+            if (brush != null) {
+                if (brush is SolidColorBrush solid) {
+                    if (solid.Color != Colors.Transparent)
+                        return false;
+                } else 
+                    // background of a different Brush type, assume not transparent
+                    return false;
+            }
+
+            return true;
+        }
+
+        private void UpdateInitialBackground() {
+            if (!IsTransparentBrush(Background))
+                return;
+
+            var parent = VisualTreeHelper.GetParent(this);
+            Brush parentBrush = null;
+            while (parent != null && parentBrush == null) {
+                if (parent is Control control) {
+                    if (!IsTransparentBrush(control.Background))
+                        parentBrush = control.Background;
+                } else if (parent is Panel panel) {
+                    if (!IsTransparentBrush(panel.Background))
+                        parentBrush = panel.Background;
+                }
+                parent = VisualTreeHelper.GetParent(parent);
+            }
+
+            if (parentBrush != null)
+                Background = parentBrush;
         }
 
         /// <summary>
@@ -36,6 +81,9 @@ namespace SilverlightContrib.Controls
             HeaderRect = (RectangleGeometry)GetTemplateChild("HeaderRect");
             HeaderContainer = (ContentControl)GetTemplateChild("HeaderContainer");
             HeaderContainer.SizeChanged += HeaderContainer_SizeChanged;
+
+            _applyTemplateDone = true;
+            PostponeUpdateInitialBackground();
         }
 
         /// <summary>

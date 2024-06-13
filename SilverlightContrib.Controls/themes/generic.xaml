@@ -324,7 +324,9 @@
                         </Border>
                         <ContentPresenter Grid.Row="2" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" Margin="{TemplateBinding Padding}"/>
                         <ContentControl x:Name="HeaderContainer" Margin="6,0,0,0" Grid.Row="0" Grid.RowSpan="2" HorizontalAlignment="Left">
-                            <ContentPresenter Margin="3,0,3,0" ContentTemplate="{TemplateBinding HeaderTemplate}" Content="{TemplateBinding Header}"/>
+                            <Grid Background="{TemplateBinding Background}">
+                                <ContentPresenter Margin="3,0,3,0" ContentTemplate="{TemplateBinding HeaderTemplate}" Content="{TemplateBinding Header}"/>
+                            </Grid>
                         </ContentControl>
                     </Grid>
                 </ControlTemplate>
