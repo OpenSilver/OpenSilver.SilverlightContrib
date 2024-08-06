@@ -3,7 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:sc="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
     xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows">
-    
+
     <Style TargetType="sc:ColorPicker">
         <Setter Property="Width" Value="200" />
         <Setter Property="Height" Value="200" />
@@ -13,27 +13,27 @@
                     <StackPanel x:Name="RootElement">
                         <StackPanel Orientation="Horizontal">
                             <Canvas Width="20" Height="180">
-                            <Rectangle x:Name="HueMonitor" Width="20" Height="180">
-                                <Rectangle.Fill>
-                                    <LinearGradientBrush StartPoint ="0,0" EndPoint="0,1">
-                                        <GradientStop Offset="0.00" Color="#ffff0000"/>
-                                        <GradientStop Offset="0.17" Color="#ffffff00"/>
-                                        <GradientStop Offset="0.33" Color="#ff00ff00"/>
-                                        <GradientStop Offset="0.50" Color="#ff00ffff"/>
-                                        <GradientStop Offset="0.66" Color="#ff0000ff"/>
-                                        <GradientStop Offset="0.83" Color="#ffff00ff"/>
-                                        <GradientStop Offset="1.00" Color="#ffff0000"/>
-                                    </LinearGradientBrush>
-                                </Rectangle.Fill>
-                            </Rectangle>                              
-                            <Canvas x:Name="HueSelector" IsHitTestVisible="False" Height="8" Canvas.Left="0" Canvas.Top="-4">
-                                <Path Width="5" Height="8" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FF000000" Data="F1 M 276.761,316L 262.619,307.835L 262.619,324.165L 276.761,316 Z " />
-                                <Path Width="5" Height="8" Canvas.Top="8" Canvas.Left="20" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FF000000" Data="F1 M 276.761,316L 262.619,307.835L 262.619,324.165L 276.761,316 Z ">
-                                    <Path.RenderTransform>
-                                        <RotateTransform Angle="180" />
-                                    </Path.RenderTransform>
-                                </Path>
-                            </Canvas>
+                                <Rectangle x:Name="HueMonitor" Width="20" Height="180">
+                                    <Rectangle.Fill>
+                                        <LinearGradientBrush StartPoint ="0,0" EndPoint="0,1">
+                                            <GradientStop Offset="0.00" Color="#ffff0000"/>
+                                            <GradientStop Offset="0.17" Color="#ffffff00"/>
+                                            <GradientStop Offset="0.33" Color="#ff00ff00"/>
+                                            <GradientStop Offset="0.50" Color="#ff00ffff"/>
+                                            <GradientStop Offset="0.66" Color="#ff0000ff"/>
+                                            <GradientStop Offset="0.83" Color="#ffff00ff"/>
+                                            <GradientStop Offset="1.00" Color="#ffff0000"/>
+                                        </LinearGradientBrush>
+                                    </Rectangle.Fill>
+                                </Rectangle>
+                                <Canvas x:Name="HueSelector" IsHitTestVisible="False" Height="8" Canvas.Left="0" Canvas.Top="-4">
+                                    <Path Width="5" Height="8" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FF000000" Data="F1 M 276.761,316L 262.619,307.835L 262.619,324.165L 276.761,316 Z " />
+                                    <Path Width="5" Height="8" Canvas.Top="8" Canvas.Left="20" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000" Fill="#FF000000" Data="F1 M 276.761,316L 262.619,307.835L 262.619,324.165L 276.761,316 Z ">
+                                        <Path.RenderTransform>
+                                            <RotateTransform Angle="180" />
+                                        </Path.RenderTransform>
+                                    </Path>
+                                </Canvas>
                             </Canvas>
                             <Canvas Canvas.Top="0" Canvas.Left="20">
                                 <Rectangle x:Name="ColorSample" Width="180" Height="180" Fill="Red"></Rectangle>
@@ -59,7 +59,7 @@
                                 </Canvas>
                             </Canvas>
                         </StackPanel>
-                        
+
                         <StackPanel Orientation="Horizontal">
                             <Grid>
                                 <Rectangle Width="60" Height="20" Fill="Black" />
@@ -126,13 +126,13 @@
                                    RadiusY="3" 
                                    Fill="{TemplateBinding Background}" 
                                    Stretch="Fill" />
-                        
+
                         <Rectangle x:Name="HighlightElement" 
                                    RadiusX="3" 
                                    RadiusY="3" 
                                    Fill="{TemplateBinding Foreground}" 
                                    Stretch="Fill" />
-                        
+
                         <TextBlock x:Name="PercentageTextBlock" 
                                    Foreground="{TemplateBinding FontColor}" 
                                    Opacity="0" 
@@ -188,7 +188,7 @@
                                                             Storyboard.TargetProperty="(Shape.Fill).(RadialGradientBrush.GradientStops)[1].(GradientStop.Color)" 
                                                             BeginTime="00:00:00" Duration="0:0:0" 
                                                             To="#FFFF9200" />
-                                                        
+
                                                     </Storyboard>
                                                 </vsm:VisualState>
                                                 <vsm:VisualState x:Name="Selected">
@@ -215,7 +215,7 @@
                                                             Storyboard.TargetProperty="(Shape.Fill).(RadialGradientBrush.GradientStops)[1].(GradientStop.Color)" 
                                                             BeginTime="00:00:00" Duration="0:0:0" 
                                                             To="#FFFF3900" />
-                                                                                                               
+
                                                     </Storyboard>
                                                 </vsm:VisualState>
                                             </vsm:VisualStateGroup>
@@ -239,7 +239,7 @@
                                                     </RadialGradientBrush.GradientStops>
                                                 </RadialGradientBrush>
                                             </Path.Fill>
-                                        </Path>                                   
+                                        </Path>
                                     </Grid>
                                 </ControlTemplate>
                             </StackPanel.Resources>
@@ -269,7 +269,7 @@
                     <Grid Background="{TemplateBinding Background}"
                           HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
                           VerticalAlignment="{TemplateBinding VerticalAlignment}">
-                    <ItemsPresenter />
+                        <ItemsPresenter />
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
@@ -279,7 +279,7 @@
     <Style TargetType="sc:CoolMenuItem">
         <Setter Property="VerticalAlignment" Value="Bottom" />
         <Setter Property="Background" Value="Transparent" />
-        
+
         <Setter Property="RenderTransform">
             <Setter.Value>
                 <TransformGroup>
@@ -296,7 +296,7 @@
                                               ContentTemplate="{TemplateBinding ContentTemplate}" />
                         </Grid>
                     </Border>
-                    </ControlTemplate>
+                </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
@@ -324,9 +324,7 @@
                         </Border>
                         <ContentPresenter Grid.Row="2" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" Margin="{TemplateBinding Padding}"/>
                         <ContentControl x:Name="HeaderContainer" Margin="6,0,0,0" Grid.Row="0" Grid.RowSpan="2" HorizontalAlignment="Left">
-                            <Grid Background="{TemplateBinding Background}">
-                                <ContentPresenter Margin="3,0,3,0" ContentTemplate="{TemplateBinding HeaderTemplate}" Content="{TemplateBinding Header}"/>
-                            </Grid>
+                            <ContentPresenter Margin="3,0,3,0" ContentTemplate="{TemplateBinding HeaderTemplate}" Content="{TemplateBinding Header}"/>
                         </ContentControl>
                     </Grid>
                 </ControlTemplate>
