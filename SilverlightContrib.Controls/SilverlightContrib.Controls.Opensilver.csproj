@@ -1,55 +1,53 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-	<PropertyGroup>
-		<TargetFramework>netstandard2.0</TargetFramework>
-		<EnableDefaultItems>false</EnableDefaultItems>
-		<DefineSilverlight>true</DefineSilverlight>
-		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-		<AssemblyName>SilverlightContrib.Controls</AssemblyName>
-	</PropertyGroup>
-	<ItemGroup>
-		<PackageReference Include="OpenSilver" Version="3.0.1" />
-	</ItemGroup>
-	<ItemGroup>
-		<Compile Include="..\Solution Items\VersionInfo.cs">
-			<Link>Properties\VersionInfo.cs</Link>
-		</Compile>
-		<Compile Include="ColorPicker\ColorPicker.cs" />
-		<Compile Include="ColorPicker\SelectedColorEventArgs.cs" />
-		<Compile Include="ColorPicker\ColorSpace.cs" />
-		<Compile Include="ColorPicker\HSV.cs" />
-		<Compile Include="CoolMenu\CoolMenu.cs" />
-		<Compile Include="CoolMenu\CoolMenuItem.cs" />
-		<Compile Include="CoolMenu\CoolMenuItemContainerGenerator.cs" />
-		<Compile Include="CoolMenu\Behaviors\DefaultCoolMenuBehavior.cs" />
-		<Compile Include="CoolMenu\Behaviors\ICoolMenuBehavior.cs" />
-		<Compile Include="CoolMenu\SelectedMenuItemArgs.cs" />
-		<Compile Include="Emf\BaseSource.cs" />
-		<Compile Include="Emf\DownloadProgressEventArgs.cs" />
-		<Compile Include="Emf\Emf.cs" />
-		<Compile Include="Emf\EmfSource.cs" />
-		<Compile Include="Emf\EmfSourceConverter.cs" />
-		<Compile Include="Emf\ExceptionEventArgs.cs" />
-		<Compile Include="Emf\UriTypeConverter.cs" />
-		<Compile Include="GroupBox\GroupBox.cs" />
-		<Compile Include="Properties\AssemblyInfo.cs" />
-		<Compile Include="SliderGauge\PercentageChangedEventArgs.cs" />
-		<Compile Include="SliderGauge\SliderGauge.cs" />
-		<Compile Include="StarSelector\RatingChangedEventArgs.cs" />
-		<Compile Include="StarSelector\Star.cs" />
-		<Compile Include="StarSelector\StarSelector.cs" />
-	</ItemGroup>
-	<ItemGroup>
-		<ProjectReference Include="..\SilverlightContrib\SilverlightContrib.Opensilver.csproj">
-			<Project>{FB7C04D9-18C1-4EDD-AA8D-28FA6400E629}</Project>
-			<Name>SilverlightContrib</Name>
-		</ProjectReference>
-	</ItemGroup>
-	<ItemGroup>
-		<Page Include="themes\generic.xaml">
-			<Generator>MSBuild:MarkupCompilePass1</Generator>
-			<SubType>Designer</SubType>
-			<Generator>MSBuild:Compile</Generator>
-			<SubType>Designer</SubType>
-		</Page>
-	</ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <DefineSilverlight>true</DefineSilverlight>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AssemblyName>SilverlightContrib.Controls</AssemblyName>
+    <UseOpenSilver>true</UseOpenSilver>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SilverlightContrib\SilverlightContrib.Opensilver.csproj"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Solution Items\VersionInfo.cs">
+      <Link>Properties\VersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="ColorPicker\ColorPicker.cs" />
+    <Compile Include="ColorPicker\SelectedColorEventArgs.cs" />
+    <Compile Include="ColorPicker\ColorSpace.cs" />
+    <Compile Include="ColorPicker\HSV.cs" />
+    <Compile Include="CoolMenu\CoolMenu.cs" />
+    <Compile Include="CoolMenu\CoolMenuItem.cs" />
+    <Compile Include="CoolMenu\CoolMenuItemContainerGenerator.cs" />
+    <Compile Include="CoolMenu\Behaviors\DefaultCoolMenuBehavior.cs" />
+    <Compile Include="CoolMenu\Behaviors\ICoolMenuBehavior.cs" />
+    <Compile Include="CoolMenu\SelectedMenuItemArgs.cs" />
+    <Compile Include="Emf\BaseSource.cs" />
+    <Compile Include="Emf\DownloadProgressEventArgs.cs" />
+    <Compile Include="Emf\Emf.cs" />
+    <Compile Include="Emf\EmfSource.cs" />
+    <Compile Include="Emf\EmfSourceConverter.cs" />
+    <Compile Include="Emf\ExceptionEventArgs.cs" />
+    <Compile Include="Emf\UriTypeConverter.cs" />
+    <Compile Include="GroupBox\GroupBox.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SliderGauge\PercentageChangedEventArgs.cs" />
+    <Compile Include="SliderGauge\SliderGauge.cs" />
+    <Compile Include="StarSelector\RatingChangedEventArgs.cs" />
+    <Compile Include="StarSelector\Star.cs" />
+    <Compile Include="StarSelector\StarSelector.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Include="themes\generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
 </Project>

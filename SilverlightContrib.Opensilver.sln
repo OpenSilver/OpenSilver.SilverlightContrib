@@ -5,12 +5,14 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F4FE2B6D-D968-4933-958C-AF629A028994}"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		Directory.Build.targets = Directory.Build.targets
+		.github\workflows\github-actions.yml = .github\workflows\github-actions.yml
 		License.txt = License.txt
+		NuGet.Config = NuGet.Config
 		ReadMe.txt = ReadMe.txt
 		Solution Items\VersionInfo.cs = Solution Items\VersionInfo.cs
 	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{600FC932-42D6-4298-B9EF-A87A140B37D4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SilverlightContrib.Opensilver", "SilverlightContrib\SilverlightContrib.Opensilver.csproj", "{FB7C04D9-18C1-4EDD-AA8D-28FA6400E629}"
 EndProject
@@ -21,6 +23,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SilverlightContrib.Data.Opensilver", "SilverlightContrib.Data\SilverlightContrib.Data.Opensilver.csproj", "{8B1D3778-8E83-4A55-8C8E-B6F8BB7C434A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SilverlightContrib.Sample.Browser", "SilverlightContrib.Sample.Browser\SilverlightContrib.Sample.Browser.csproj", "{21B08E46-4672-4DD3-AC88-06E2E6C3B646}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{5E0178DE-781B-4015-B63F-0DB74776F91B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,5 +91,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7181276F-AE2A-42FE-9AEF-8C82CD914667} = {5E0178DE-781B-4015-B63F-0DB74776F91B}
+		{21B08E46-4672-4DD3-AC88-06E2E6C3B646} = {5E0178DE-781B-4015-B63F-0DB74776F91B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB7DF526-A6D4-423C-AD1A-4F544E63C30C}
 	EndGlobalSection
 EndGlobal

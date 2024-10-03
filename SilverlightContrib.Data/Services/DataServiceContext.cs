@@ -8,7 +8,11 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
+#if OPENSILVER
+using Microsoft.OData.Client;
+#else
 using System.Data.Services.Client;
+#endif
 using System.IO;
 using System.Linq;
 using System.Xml;

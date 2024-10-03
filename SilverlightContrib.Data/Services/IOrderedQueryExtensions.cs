@@ -9,7 +9,11 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using System.Linq;
+#if OPENSILVER
+using Microsoft.OData.Client;
+#else
 using System.Data.Services.Client;
+#endif
 using System.Collections.Generic;
 
 namespace SilverlightContrib.Data.Services.Extensions

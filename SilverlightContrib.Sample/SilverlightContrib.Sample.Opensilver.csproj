@@ -1,239 +1,195 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-	<PropertyGroup>
-		<TargetFramework>netstandard2.0</TargetFramework>
-		<EnableDefaultItems>false</EnableDefaultItems>
-		<DefineSilverlight>true</DefineSilverlight>
-		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-		<AssemblyName>SilverlightContrib.Sample</AssemblyName>
-	</PropertyGroup>
-	<ItemGroup>
-		<PackageReference Include="OpenSilver" Version="3.0.1" />
-	</ItemGroup>
-	<ItemGroup>
-		<Compile Include="..\Solution Items\VersionInfo.cs">
-			<Link>Properties\VersionInfo.cs</Link>
-		</Compile>
-		<Compile Include="App.xaml.cs">
-			<DependentUpon>App.xaml</DependentUpon>
-		</Compile>
-		<Compile Include="ClipboardHelperSample.xaml.cs">
-			<DependentUpon>ClipboardHelperSample.xaml</DependentUpon>
-		</Compile>
-		<Compile Include="ColorPickerSample.xaml.cs">
-			<DependentUpon>ColorPickerSample.xaml</DependentUpon>
-		</Compile>
-		<Compile Include="ConverterSamples.xaml.cs">
-			<DependentUpon>ConverterSamples.xaml</DependentUpon>
-		</Compile>
-		<Compile Include="CoolMenuSample\CoolMenuSample.xaml.cs">
-			<DependentUpon>CoolMenuSample.xaml</DependentUpon>
-		</Compile>
-		<Compile Include="DataServiceSample.xaml.cs">
-			<DependentUpon>DataServiceSample.xaml</DependentUpon>
-		</Compile>
-		<Compile Include="EmfSample.xaml.cs">
-			<DependentUpon>EmfSample.xaml</DependentUpon>
-		</Compile>
-		<Compile Include="GroupBoxSample.xaml.cs">
-			<DependentUpon>GroupBoxSample.xaml</DependentUpon>
-		</Compile>
-		<Compile Include="ImagingSample.xaml.cs">
-			<DependentUpon>ImagingSample.xaml</DependentUpon>
-		</Compile>
-		<Compile Include="Page.xaml.cs">
-			<DependentUpon>Page.xaml</DependentUpon>
-		</Compile>
-		<Compile Include="Properties\AssemblyInfo.cs" />
-		<Compile Include="RtfSample.xaml.cs">
-			<DependentUpon>RtfSample.xaml</DependentUpon>
-		</Compile>
-		<Compile Include="SampleItem.cs" />
-		<Compile Include="Service References\SampleDataServices\Reference.cs">
-			<AutoGen>True</AutoGen>
-			<DesignTime>True</DesignTime>
-			<DependentUpon>Reference.datasvcmap</DependentUpon>
-		</Compile>
-		<Compile Include="SliderGaugeSample.xaml.cs">
-			<DependentUpon>SliderGaugeSample.xaml</DependentUpon>
-		</Compile>
-		<Compile Include="StarSelectorSample.xaml.cs">
-			<DependentUpon>StarSelectorSample.xaml</DependentUpon>
-		</Compile>
-		<Compile Include="TweeningSample.xaml.cs">
-			<DependentUpon>TweeningSample.xaml</DependentUpon>
-		</Compile>
-		<Compile Include="WheelMouseListenerSample.xaml.cs">
-			<DependentUpon>WheelMouseListenerSample.xaml</DependentUpon>
-		</Compile>
-		<Compile Include="XamlWriterSample.xaml.cs">
-			<DependentUpon>XamlWriterSample.xaml</DependentUpon>
-		</Compile>
-		<Compile Include="ZipCompessionSample.xaml.cs">
-			<DependentUpon>ZipCompessionSample.xaml</DependentUpon>
-		</Compile>
-	</ItemGroup>
-	<ItemGroup>
-		<ApplicationDefinition Include="App.xaml">
-			<Generator>MSBuild:MarkupCompilePass1</Generator>
-			<SubType>Designer</SubType>
-			<Generator>MSBuild:Compile</Generator>
-			<SubType>Designer</SubType>
-		</ApplicationDefinition>
-		<Page Include="ClipboardHelperSample.xaml">
-			<SubType>Page</SubType>
-			<Generator>MSBuild:MarkupCompilePass1</Generator>
-			<Generator>MSBuild:Compile</Generator>
-			<SubType>Designer</SubType>
-		</Page>
-		<Page Include="ColorPickerSample.xaml">
-			<SubType>Designer</SubType>
-			<Generator>MSBuild:MarkupCompilePass1</Generator>
-			<Generator>MSBuild:Compile</Generator>
-			<SubType>Designer</SubType>
-		</Page>
-		<Page Include="ConverterSamples.xaml">
-			<SubType>Page</SubType>
-			<Generator>MSBuild:MarkupCompilePass1</Generator>
-			<Generator>MSBuild:Compile</Generator>
-			<SubType>Designer</SubType>
-		</Page>
-		<Page Include="CoolMenuSample\CoolMenuSample.xaml">
-			<SubType>Designer</SubType>
-			<Generator>MSBuild:MarkupCompilePass1</Generator>
-			<Generator>MSBuild:Compile</Generator>
-			<SubType>Designer</SubType>
-		</Page>
-		<Page Include="DataServiceSample.xaml">
-			<Generator>MSBuild:MarkupCompilePass1</Generator>
-			<SubType>Designer</SubType>
-			<Generator>MSBuild:Compile</Generator>
-			<SubType>Designer</SubType>
-		</Page>
-		<Page Include="EmfSample.xaml">
-			<SubType>Designer</SubType>
-			<Generator>MSBuild:MarkupCompilePass1</Generator>
-			<Generator>MSBuild:Compile</Generator>
-			<SubType>Designer</SubType>
-		</Page>
-		<Page Include="GroupBoxSample.xaml">
-			<SubType>Page</SubType>
-			<Generator>MSBuild:MarkupCompilePass1</Generator>
-			<Generator>MSBuild:Compile</Generator>
-			<SubType>Designer</SubType>
-		</Page>
-		<Page Include="ImagingSample.xaml">
-			<SubType>Page</SubType>
-			<Generator>MSBuild:MarkupCompilePass1</Generator>
-			<Generator>MSBuild:Compile</Generator>
-			<SubType>Designer</SubType>
-		</Page>
-		<Page Include="Page.xaml">
-			<Generator>MSBuild:MarkupCompilePass1</Generator>
-			<SubType>Designer</SubType>
-			<Generator>MSBuild:Compile</Generator>
-			<SubType>Designer</SubType>
-		</Page>
-		<Page Include="RtfSample.xaml">
-			<SubType>Designer</SubType>
-			<Generator>MSBuild:MarkupCompilePass1</Generator>
-			<Generator>MSBuild:Compile</Generator>
-			<SubType>Designer</SubType>
-		</Page>
-		<Page Include="SliderGaugeSample.xaml">
-			<SubType>Designer</SubType>
-			<Generator>MSBuild:MarkupCompilePass1</Generator>
-			<Generator>MSBuild:Compile</Generator>
-			<SubType>Designer</SubType>
-		</Page>
-		<Page Include="StarSelectorSample.xaml">
-			<SubType>Designer</SubType>
-			<Generator>MSBuild:MarkupCompilePass1</Generator>
-			<Generator>MSBuild:Compile</Generator>
-			<SubType>Designer</SubType>
-		</Page>
-		<Page Include="TweeningSample.xaml">
-			<SubType>Designer</SubType>
-			<Generator>MSBuild:MarkupCompilePass1</Generator>
-			<Generator>MSBuild:Compile</Generator>
-			<SubType>Designer</SubType>
-		</Page>
-		<Page Include="WheelMouseListenerSample.xaml">
-			<SubType>Designer</SubType>
-			<Generator>MSBuild:MarkupCompilePass1</Generator>
-			<Generator>MSBuild:Compile</Generator>
-			<SubType>Designer</SubType>
-		</Page>
-		<Page Include="XamlWriterSample.xaml">
-			<SubType>Designer</SubType>
-			<Generator>MSBuild:MarkupCompilePass1</Generator>
-			<Generator>MSBuild:Compile</Generator>
-			<SubType>Designer</SubType>
-		</Page>
-		<Page Include="ZipCompessionSample.xaml">
-			<SubType>Designer</SubType>
-			<Generator>MSBuild:MarkupCompilePass1</Generator>
-			<Generator>MSBuild:Compile</Generator>
-			<SubType>Designer</SubType>
-		</Page>
-	</ItemGroup>
-	<ItemGroup>
-		<Content Include="Images\CoolMenuImages\Cards\Poker-sm-21A-5s.png" />
-		<Content Include="Images\CoolMenuImages\Cards\Poker-sm-221-Ah.png" />
-		<Content Include="Images\CoolMenuImages\Cards\Poker-sm-23C-3d.png" />
-		<Content Include="Images\CoolMenuImages\Cards\Poker-sm-242-Kc.png" />
-		<Content Include="Images\CoolMenuImages\Cards\Poker-sm-245-Tc.png" />
-		<Content Include="Images\CoolMenuImages\Icons\bomb.png" />
-		<Content Include="Images\CoolMenuImages\Icons\box.png" />
-		<Content Include="Images\CoolMenuImages\Icons\calc.png" />
-		<Content Include="Images\CoolMenuImages\Icons\coffee.png" />
-		<Content Include="Images\CoolMenuImages\Icons\fish.png" />
-		<Content Include="Images\CoolMenuImages\Icons\gear.png" />
-		<Content Include="Images\CoolMenuImages\Icons\lock.png" />
-		<Content Include="Images\CoolMenuImages\Icons\pacman.png" />
-		<Content Include="Images\CoolMenuImages\Icons\star.png" />
-		<Resource Include="Images\silverlight_contrib.png" />
-		<Content Include="Images\Wmf\lion.wmf" />
-		<Content Include="Images\Wmf\boat.wmf" />
-		<Content Include="Images\Wmf\congress.wmf" />
-		<Content Include="Images\Wmf\farm.wmf" />
-		<Content Include="Images\Wmf\flower.wmf" />
-		<Content Include="Images\Wmf\snake.wmf" />
-		<Content Include="Images\Wmf\tool.wmf" />
-		<Content Include="Misc\cd_catalog.xml" />
-		<Content Include="Misc\testfile1.txt" />
-		<Content Include="Misc\testfile1.zip" />
-		<None Include="Service References\SampleDataServices\Reference.datasvcmap">
-			<Generator>DataServiceClientGenerator</Generator>
-			<LastGenOutput>Reference.cs</LastGenOutput>
-		</None>
-		<None Include="Properties\AppManifest.xml" />
-		<None Include="Service References\SampleDataServices\service.edmx" />
-	</ItemGroup>
-	<ItemGroup>
-		<ProjectReference Include="..\SilverlightContrib.Controls\SilverlightContrib.Controls.Opensilver.csproj">
-			<Project>{DA40F41E-B029-4819-A57F-8A042EDD3556}</Project>
-			<Name>SilverlightContrib.Controls</Name>
-		</ProjectReference>
-		<ProjectReference Include="..\SilverlightContrib.Data\SilverlightContrib.Data.Opensilver.csproj">
-			<Project>{8B1D3778-8E83-4A55-8C8E-B6F8BB7C434A}</Project>
-			<Name>SilverlightContrib.Data</Name>
-		</ProjectReference>
-		<ProjectReference Include="..\SilverlightContrib\SilverlightContrib.Opensilver.csproj">
-			<Project>{FB7C04D9-18C1-4EDD-AA8D-28FA6400E629}</Project>
-			<Name>SilverlightContrib</Name>
-		</ProjectReference>
-	</ItemGroup>
-	<ItemGroup>
-	  <Reference Include="System.Data.Services.Client">
-	    <HintPath>I:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.Services.Client.dll</HintPath>
-	  </Reference>
-	</ItemGroup>
-	<ItemGroup>
-		<WCFMetadata Include="Service References\" />
-	</ItemGroup>
-	<ItemGroup>
-		<ServiceReferenceMetadataStorage Include="Service References\SampleDataServices\">
-			<Type>datasvcmap</Type>
-		</ServiceReferenceMetadataStorage>
-	</ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <DefineSilverlight>true</DefineSilverlight>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AssemblyName>SilverlightContrib.Sample</AssemblyName>
+    <UseOpenSilver>true</UseOpenSilver>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SilverlightContrib.Controls\SilverlightContrib.Controls.Opensilver.csproj" />
+    <ProjectReference Include="..\SilverlightContrib.Data\SilverlightContrib.Data.Opensilver.csproj" />
+    <ProjectReference Include="..\SilverlightContrib\SilverlightContrib.Opensilver.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Solution Items\VersionInfo.cs">
+      <Link>Properties\VersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ClipboardHelperSample.xaml.cs">
+      <DependentUpon>ClipboardHelperSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ColorPickerSample.xaml.cs">
+      <DependentUpon>ColorPickerSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ConverterSamples.xaml.cs">
+      <DependentUpon>ConverterSamples.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CoolMenuSample\CoolMenuSample.xaml.cs">
+      <DependentUpon>CoolMenuSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataServiceSample.xaml.cs">
+      <DependentUpon>DataServiceSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EmfSample.xaml.cs">
+      <DependentUpon>EmfSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GroupBoxSample.xaml.cs">
+      <DependentUpon>GroupBoxSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ImagingSample.xaml.cs">
+      <DependentUpon>ImagingSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page.xaml.cs">
+      <DependentUpon>Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RtfSample.xaml.cs">
+      <DependentUpon>RtfSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SampleItem.cs" />
+    <Compile Include="Service References\SampleDataServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.datasvcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SliderGaugeSample.xaml.cs">
+      <DependentUpon>SliderGaugeSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StarSelectorSample.xaml.cs">
+      <DependentUpon>StarSelectorSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TweeningSample.xaml.cs">
+      <DependentUpon>TweeningSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WheelMouseListenerSample.xaml.cs">
+      <DependentUpon>WheelMouseListenerSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XamlWriterSample.xaml.cs">
+      <DependentUpon>XamlWriterSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ZipCompessionSample.xaml.cs">
+      <DependentUpon>ZipCompessionSample.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="ClipboardHelperSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ColorPickerSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ConverterSamples.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CoolMenuSample\CoolMenuSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataServiceSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="EmfSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GroupBoxSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ImagingSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="RtfSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SliderGaugeSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="StarSelectorSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TweeningSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WheelMouseListenerSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="XamlWriterSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ZipCompessionSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\CoolMenuImages\Cards\Poker-sm-21A-5s.png" />
+    <Content Include="Images\CoolMenuImages\Cards\Poker-sm-221-Ah.png" />
+    <Content Include="Images\CoolMenuImages\Cards\Poker-sm-23C-3d.png" />
+    <Content Include="Images\CoolMenuImages\Cards\Poker-sm-242-Kc.png" />
+    <Content Include="Images\CoolMenuImages\Cards\Poker-sm-245-Tc.png" />
+    <Content Include="Images\CoolMenuImages\Icons\bomb.png" />
+    <Content Include="Images\CoolMenuImages\Icons\box.png" />
+    <Content Include="Images\CoolMenuImages\Icons\calc.png" />
+    <Content Include="Images\CoolMenuImages\Icons\coffee.png" />
+    <Content Include="Images\CoolMenuImages\Icons\fish.png" />
+    <Content Include="Images\CoolMenuImages\Icons\gear.png" />
+    <Content Include="Images\CoolMenuImages\Icons\lock.png" />
+    <Content Include="Images\CoolMenuImages\Icons\pacman.png" />
+    <Content Include="Images\CoolMenuImages\Icons\star.png" />
+    <Resource Include="Images\silverlight_contrib.png" />
+    <Content Include="Images\Wmf\lion.wmf" />
+    <Content Include="Images\Wmf\boat.wmf" />
+    <Content Include="Images\Wmf\congress.wmf" />
+    <Content Include="Images\Wmf\farm.wmf" />
+    <Content Include="Images\Wmf\flower.wmf" />
+    <Content Include="Images\Wmf\snake.wmf" />
+    <Content Include="Images\Wmf\tool.wmf" />
+    <Content Include="Misc\cd_catalog.xml" />
+    <Content Include="Misc\testfile1.txt" />
+    <Content Include="Misc\testfile1.zip" />
+    <None Include="Service References\SampleDataServices\Reference.datasvcmap">
+      <Generator>DataServiceClientGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Service References\SampleDataServices\service.edmx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ServiceReferenceMetadataStorage Include="Service References\SampleDataServices\">
+      <Type>datasvcmap</Type>
+    </ServiceReferenceMetadataStorage>
+  </ItemGroup>
 </Project>

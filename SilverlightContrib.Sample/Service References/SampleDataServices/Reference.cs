@@ -8,6 +8,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+#if OPENSILVER
+using Microsoft.OData.Client;
+#else
+using System.Data.Services.Client;
+#endif
+
 // Original file name:
 // Generation date: 5/23/2024 5:26:34 PM
 namespace SilverlightContrib.Sample.SampleDataServices
@@ -16,7 +22,7 @@ namespace SilverlightContrib.Sample.SampleDataServices
     /// <summary>
     /// There are no comments for SampleDataServiceContext in the schema.
     /// </summary>
-    public partial class SampleDataServiceContext : global::System.Data.Services.Client.DataServiceContext
+    public partial class SampleDataServiceContext : DataServiceContext
     {
         /// <summary>
         /// Initialize a new SampleDataServiceContext object.
@@ -62,7 +68,7 @@ namespace SilverlightContrib.Sample.SampleDataServices
         /// There are no comments for Customers in the schema.
         /// </summary>
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Data.Services.Client.DataServiceQuery<Customer> Customers
+        public DataServiceQuery<Customer> Customers
         {
             get
             {
@@ -74,7 +80,7 @@ namespace SilverlightContrib.Sample.SampleDataServices
             }
         }
         [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Data.Services.Client.DataServiceQuery<Customer> _Customers;
+        private DataServiceQuery<Customer> _Customers;
         /// <summary>
         /// There are no comments for Customers in the schema.
         /// </summary>
@@ -90,7 +96,9 @@ namespace SilverlightContrib.Sample.SampleDataServices
     /// <KeyProperties>
     /// CustomerID
     /// </KeyProperties>
+#if !OPENSILVER
     [global::System.Data.Services.Common.DataServiceKeyAttribute("CustomerID")]
+#endif
     public partial class Customer
     {
         /// <summary>

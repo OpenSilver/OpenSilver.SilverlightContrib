@@ -11,7 +11,11 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using SilverlightContrib.Sample.SampleDataServices;
 using SilverlightContrib.Data.Services.Client;
+#if OPENSILVER
+using Microsoft.OData.Client;
+#else
 using System.Data.Services.Client;
+#endif
 using SilverlightContrib.Data.Services.Extensions;
 
 namespace SilverlightContrib.Sample

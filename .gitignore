@@ -398,3 +398,6 @@ FodyWeavers.xsd
 *.sln.iml
 
 build/output/*
+
+SilverlightContrib.Sample.Browser/wwwroot/libs/
+SilverlightContrib.Sample.Browser/wwwroot/resources/
