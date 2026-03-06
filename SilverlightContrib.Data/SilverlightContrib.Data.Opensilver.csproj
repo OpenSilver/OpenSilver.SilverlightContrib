@@ -6,10 +6,10 @@
     <DefineSilverlight>true</DefineSilverlight>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>SilverlightContrib.Data</AssemblyName>
-    <UseOpenSilver>true</UseOpenSilver>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="OpenSilver" Version="[$(OpenSilverVersion)]" />
     <PackageReference Include="Microsoft.OData.Client" Version="7.21.4" />
   </ItemGroup>
 

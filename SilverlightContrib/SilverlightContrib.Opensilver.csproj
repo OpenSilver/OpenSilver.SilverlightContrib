@@ -6,8 +6,11 @@
     <DefineSilverlight>true</DefineSilverlight>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>SilverlightContrib</AssemblyName>
-    <UseOpenSilver>true</UseOpenSilver>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OpenSilver" Version="[$(OpenSilverVersion)]" />
+  </ItemGroup>
 
   <ItemGroup>
     <Compile Include="..\Solution Items\VersionInfo.cs">

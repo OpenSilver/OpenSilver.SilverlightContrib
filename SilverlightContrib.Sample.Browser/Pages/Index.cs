@@ -1,8 +1,7 @@
-﻿using DotNetForHtml5;
-using Microsoft.AspNetCore.Components;
+﻿using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Rendering;
-using Microsoft.JSInterop;
-using SilverlightContrib.Sample.Browser.Interop;
+using OpenSilver.WebAssembly;
+using System.Threading.Tasks;
 
 namespace SilverlightContrib.Sample.Browser.Pages
 {
@@ -13,14 +12,10 @@ namespace SilverlightContrib.Sample.Browser.Pages
         {
         }
 
-        protected override void OnInitialized()
+        protected override async Task OnInitializedAsync()
         {
-            base.OnInitialized();
-            Cshtml5Initializer.Initialize(new UnmarshalledJavaScriptExecutionHandler(JSRuntime));
-            Program.RunApplication();
+            await base.OnInitializedAsync();
+            await Runner.RunApplicationAsync<Sample.App>();
         }
-
-        [Inject]
-        private IJSRuntime JSRuntime { get; set; }
     }
 }

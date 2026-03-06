@@ -59,11 +59,7 @@ namespace SilverlightContrib.Controls
         {
             (d as BaseSource).OnUriSourcePropertyChanged(e);
         }
-#if !OPENSILVER
         private void OnUriSourcePropertyChanged(DependencyPropertyChangedEventArgs e)
-#else
-        private async void OnUriSourcePropertyChanged(DependencyPropertyChangedEventArgs e)
-#endif
         {
             if (this.client.IsBusy)
             {
@@ -80,11 +76,7 @@ namespace SilverlightContrib.Controls
                     if (!source.IsAbsoluteUri)
                     {
                         // first try embedded resource
-#if !OPENSILVER
-                        resource = Application.GetResourceStream(source);
-#else
-                        resource = await Application.GetResourceStream(source);
-#endif
+                        resource = Application.GetResourceStream(source).Result;
                     }
                     if (resource != null)
                     {
